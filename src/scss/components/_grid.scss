@@ -1,0 +1,97 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid';
+
+/*
+ * This is a copy of bootstrap grid. We want to get rid of bootstrap in the future.
+ * The idea is the same as bootstrap's, except the prefix is 'field' instead of 'col'.
+ * For documentation see https://getbootstrap.com/docs/4.1/layout/grid/
+ */
+
+@mixin flexBasisXof12($x) {
+  flex-basis: percentage(100/12 * $x/100);
+  max-width: percentage(100/12 * $x/100);
+}
+
+@mixin flexPushXof12($x) {
+  margin-right: percentage(100/12 * $x/100);
+}
+
+@mixin flexRtlPushXof12($x) {
+  margin-left: percentage(100/12 * $x/100);
+}
+
+@mixin directionDependentPush($size, $i) {
+  &[dir='ltr'].push-#{$size}-#{$i}x {
+    @include flexPushXof12($i);
+  }
+  &[dir='rtl'].push-#{$size}-#{$i}x {
+    @include flexRtlPushXof12($i);
+  }
+}
+
+::ng-deep {
+  .dynamic-form-field,
+  .dynamic-component__item {
+    @for $i from 1 through 12 {
+      // Generate .field-1x to .field-12x
+      &.field-#{$i}x {
+        @include flexBasisXof12($i);
+      }
+
+      // Generate indent .push-1x to .push-12x
+      &[dir='ltr'].push-#{$i}x {
+        @include flexPushXof12($i);
+      }
+      &[dir='rtl'].push-#{$i}x {
+        @include flexRtlPushXof12($i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  ::ng-deep {
+    .dynamic-form-field,
+    .dynamic-component__item {
+      // Generate .field-1x to .field-12x
+      @for $i from 1 through 12 {
+        &.field-md-#{$i}x {
+          @include flexBasisXof12($i);
+        }
+
+        @include directionDependentPush(md, $i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  ::ng-deep {
+    .dynamic-form-field,
+    .dynamic-component__item {
+      // Generate .field-1x to .field-12x
+      @for $i from 1 through 12 {
+        &.field-lg-#{$i}x {
+          @include flexBasisXof12($i);
+        }
+
+        @include directionDependentPush(lg, $i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  ::ng-deep {
+    .dynamic-form-field,
+    .dynamic-component__item {
+      // Generate .field-1x to .field-12x
+      @for $i from 1 through 12 {
+        &.field-xl-#{$i}x {
+          @include flexBasisXof12($i);
+        }
+
+        @include directionDependentPush(xl, $i);
+      }
+    }
+  }
+}

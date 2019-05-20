@@ -1,9 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "./scss/mixins/mixins";
+@import "./scss/mixins/clearfix";
+@import "./scss/variables/colors";
+@import url("https://www.cemexgo.com/cdn/cmx-fonts.css");
+@import url("https://www.cemexgo.com/cdn/cmx-dls-icons.css");
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
+@import "./scss/components/mq";
+
+/*styles*/
+
 html,
 body {
     min-width: 582px;
     padding: 0 10px;
     background-color: #001b3a;
     margin: 1px -9px 10px -9px;
+}
+
+body::-webkit-scrollbar {
+    width: 0 !important;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
 }

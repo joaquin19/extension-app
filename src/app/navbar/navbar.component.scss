@@ -1,3 +1,13 @@
+@import "../../scss/mixins/mixins";
+@import "../../scss/mixins/clearfix";
+@import "../../scss/mixins/spinners";
+@import "../../scss//variables/colors";
+@import "../../scss/variables/dls-icon-font";
+@import "../../scss/variables/radius";
+@import "../../assets/dls/css/app.bundle.css";
+
+/* Styles */
+
 .btn-back {
     background-color: white;
 }

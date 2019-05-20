@@ -1,0 +1,16 @@
+@import '../variables/colors';
+
+@mixin container {
+  padding: 15px;
+
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
+}
+
+@mixin page-header {
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  font-weight: 700;
+  color: $deep-blue;
+}

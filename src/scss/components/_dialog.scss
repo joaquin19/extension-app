@@ -1,0 +1,112 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '../variables/colors';
+
+// Order Mobile Thumbnail
+.order-mobile-thumbnail {
+  &__requested-time {
+    float: right;
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+    }
+  }
+}
+
+// Demand and Upload
+.cmx-icon-accepted-ok {
+  color: $green;
+  font-size: 8rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 4rem;
+  }
+}
+
+.cmx-icon-warning {
+  color: $true-red;
+  font-size: 8rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 4rem;
+  }
+}
+
+.success-text {
+  margin-top: 1.625rem;
+  font-size: 1.625rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.25rem;
+  }
+}
+
+button.back-to-orders {
+  margin-top: 3.75rem;
+  @include media-breakpoint-down(sm) {
+    margin-top: 1.875rem;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 32px;
+  cursor: pointer;
+  z-index: 1;
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    cursor: pointer;
+  }
+
+  .cmx-icon-close {
+    font-size: 1.25rem;
+    color: $blue;
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.title-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.25rem;
+  }
+}
+
+.drag-drop-area {
+  padding: 2.5rem 5rem;
+  border: 2px dashed #ddd;
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.25rem 2.5rem;
+  }
+
+  &.active {
+    border: 2px solid $blue;
+  }
+}
+
+.upload-schedule-label {
+  color: $blue;
+  cursor: pointer;
+}
+
+.sub-title {
+  color: $medium-grey;
+  & .small {
+    font-size: 0.75rem;
+  }
+}
