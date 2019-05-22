@@ -8,11 +8,23 @@
 
 /* Styles */
 
-.btn-back {
-    background-color: white;
-}
-
 .align {
     justify-content: center;
+    display: flex;
+}
+
+.btn-left {
+    padding-left: 0%;
+    display: flex;
+    justify-content: center;
+    margin-left: 94%;
+}
+
+img {
+    width: 108px;
+    margin-top: 0.25rem;
+    height: 30px;
+    margin-left: 1.75rem;
+    background-size: contain;
     display: flex;
 }

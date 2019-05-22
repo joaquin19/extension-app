@@ -7,3 +7,18 @@
 @import "../../assets/dls/css/app.bundle.css";
 
 /* Styles*/
+
+table {
+    width: 100%;
+}
+
+.mat-table .mat-cell {
+    padding-right: 18%;
+    text-align: -webkit-center;
+}
+
+mat-form-field {
+    display: flex;
+    width: 250px;
+    margin: 0px 0px 0px 25px;
+}
